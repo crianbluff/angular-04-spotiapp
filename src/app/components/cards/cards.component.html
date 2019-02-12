@@ -1,0 +1,18 @@
+<div class="card-columns m-2-0 animated fadein">
+
+	<div *ngFor="let item of items" class="card puntero">
+		<img [src]="item.images | noimage" [alt]="item.name" [title]="item.name" (click)="viewArtist( item )" class="card-img-top">
+		<div class="card-body">
+			<h5 class="card-title">
+				{{ item.name }}
+			</h5>
+
+			<p class="card-text">
+				<span class="badge badge-pill badge-primary" *ngFor="let artist of item.artists">
+					{{ artist.name }}
+				</span>
+			</p>
+		</div>
+	</div>
+
+</div>
